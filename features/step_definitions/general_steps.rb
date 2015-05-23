@@ -21,6 +21,7 @@ And(/^I enter a new code$/) do
     @page.input3 = '55950954'
     @page.add_another
 
+  #running on sauce always times out right here...
     Watir::Wait.until { @page.input4_element.visible? }
     @page.input4 = '55950954'
     @page.submit
